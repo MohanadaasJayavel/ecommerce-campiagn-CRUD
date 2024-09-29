@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "2cfe5717-e395-4e18-bd0e-3fdb92ede131",
+		"name": "Ecommerce - Campaign CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36858543"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Mohan123\",\r\n    \"password\": \"MOH@n@D@@S@2011\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Mohan123\",\r\n    \"password\":\"MOH@n@D@@S@2011\",\r\n    \"email\":\"daas20112001@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Products by Campaign",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI3NTc4NzIxLCJleHAiOjE3Mjc1ODIzMjF9._HOroZQXA9FQmkXqAhL7hVHnLKmFEE8SqSiCScBBRGo",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campaign_name\": \"PLA-Cross selling-Dalda 1L\",\r\n    \"ad_group_id\": \"RZPNNZ8LY3PP\",\r\n    \"fsn_id\": \"EDOFCSBGHFQ9YKAA\",\r\n    \"product_name\": \"Dalda Kachi Ghani Mustard Oil PET Bottle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/report/campaign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"report",
+						"campaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Products by Campaign by pagination",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campaign_name\": \"PLA-Cross selling-Dalda 1L\",\r\n    \"ad_group_id\": \"RZPNNZ8LY3PP\",\r\n    \"fsn_id\": \"EDOFCSBGHFQ9YKAA\",\r\n    \"product_name\": \"Dalda Kachi Ghani Mustard Oil PET Bottle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/report/campaign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"report",
+						"campaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Products by  Ad Group ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ad_group_id\": \"RZPNNZ8LY3PP\",\r\n    \"campaign_name\": \"PLA-Cross selling-Dalda 1L\",\r\n    \"fsn_id\": \"EDOFCSBGHFQ9YKAA\",\r\n    \"product_name\": \"Dalda Kachi Ghani Mustard Oil PET Bottle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/report/adGroupID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"report",
+						"adGroupID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Products by FSN ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"Dalda Kachi Ghani Mustard Oil PET Bottle\",\r\n    \"fsn_id\": \"EDOFCSBGHFQ9YKAA\",\r\n    \"campaign_name\": \"PLA-Cross selling-Dalda 1L\",\r\n    \"ad_group_id\": \"RZPNNZ8LY3PP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/report/productName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"report",
+						"productName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Products by Campaign Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campaign_name\": \"PLA-Cross selling-Dalda 1L\",\r\n    \"ad_group_id\": \"RZPNNZ8LY3PP\",\r\n    \"fsn_id\": \"EDOFCSBGHFQ9YKAA\",\r\n    \"product_name\": \"Dalda Kachi Ghani Mustard Oil PET Bottle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/report/campaign?per_page=2&page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"report",
+						"campaign"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Products using CSV",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/LAP-187/Downloads/systemTest.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/upload-csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"upload-csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\":\"Mohanadaas123\",\r\n    // \"password\":\"MOH@n@D@@S@2011\",\r\n    \"email\":\"daas20112001@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTA3MTcwLCJleHAiOjE3Mjc1MTA3NzB9.65x82CRHOB_-mJoV2tphfKnLtsm9TF8BnR8VqfXfXsk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\":\"Mohanadaas123\",\r\n    \"password\":\"MOH@n@D@@S@2011\",\r\n    \"email\":\"daas20112001@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTIzOTExLCJleHAiOjE3Mjc1Mjc1MTF9.4bKM7InUdVY3wjT-A_H-_0v_Yf2A7BoLB3BwP2RSUss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI3NTgzNzU2LCJleHAiOjE3Mjc1ODczNTZ9.OSfyAs795uHRRbudLtX9nP2_sDR0KlQuwMm2QC1xF8Y",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
